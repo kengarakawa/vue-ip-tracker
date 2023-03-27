@@ -1,4 +1,7 @@
 <script setup lang="ts">
+defineProps({
+    info: Object 
+})   
 
 </script>
 
@@ -9,23 +12,26 @@
         <!-- item #1 -->
         <div class="flex flex-col">
             <h3 class="text-xs mb-2 uppercase">IP Address</h3>
-            <span class="text-2xl">8.8.8.8</span>
+            <span class="text-2xl">{{ $props.info.ip }}</span>
         </div>
         <!-- item #2 -->
         <div class="flex flex-col">
             <h3 class="text-xs mb-2 uppercase">Location</h3>
-            <span class="text-2xl">Michigan</span>
+            <span class="text-2xl">{{ $props.info.location }}</span>
         </div>
         <!-- item #3 -->
         <div class="flex flex-col">
             <h3 class="text-xs mb-2 uppercase">Timezone</h3>
-            <span class="text-2xl">UTC+8</span>
+            <span class="text-2xl">{{ $props.info.timezone }}</span>
         </div>
         <!-- item #4 -->
         <div class="flex flex-col">
             <h3 class="text-xs mb-2 uppercase">ISP</h3>
-            <span class="text-2xl">Google</span>
+            <span class="text-2xl">{{ $props.info.isp }}</span>
         </div>
+        
+        <!-- {{  info }} -->
     </div>
 </template>
+
 
